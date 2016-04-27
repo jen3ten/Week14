@@ -1,0 +1,50 @@
+﻿@model Week14_CodeFirstGradeBook_04132016.Models.StudentAssignmentGrades
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentAssignmentGrades</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignmentID.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssignmentID.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentID.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentID.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PointsAwarded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PointsAwarded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

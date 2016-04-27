@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Week14_CodeFirstGradeBook_04132016.Models.StudentAssignmentGrades>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignmentID.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentID.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PointsAwarded)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignmentID.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentID.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PointsAwarded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grade)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
